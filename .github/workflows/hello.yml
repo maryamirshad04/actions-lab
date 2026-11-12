@@ -1,4 +1,4 @@
-﻿name: Hello Actions
+name: Hello Actions
 
 on:
   push:
@@ -8,6 +8,8 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
       - name: Say hello
         run: echo "Hello from GitHub Actions!"
       - name: Show context
